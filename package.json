@@ -1,0 +1,56 @@
+{
+  "name": "funktologies",
+  "version": "0.1.0",
+  "description": "Contains the ontology files, repeatedly used models and utility functions for a number of data scraping modules.",
+  "main": "lib/api.js",
+  "scripts": {
+    "build": "tsc",
+    "clean:dist": "npm-run-all clean:dist:*",
+    "clean:dist:rdf": "rimraf dist/ontology/**/*.*",
+    "clean:logs": "rimraf logs/*log*",
+    "copy:ontology": "npm-run-all copy:jsonld copy:owl",
+    "copy:jsonld": "copyfiles -u 1 ontology/*.json dist/ontology/jsonld/",
+    "copy:owl": "copyfiles -u 1 ontology/*.rdf dist/ontology/owl/",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "postbuild": "copyfiles -u 1 ontology/*.rdf lib/ontology/owl/",
+    "start": "run-s clean:logs clean:dist copy:ontology",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WilliamRADFunk/funktologies.git"
+  },
+  "keywords": [
+    "data",
+    "big",
+    "big-data",
+    "data-scraping",
+    "scraping",
+    "ontology",
+    "json",
+    "json-ld",
+    "n-triples",
+    "geoJson"
+  ],
+  "author": "William RAD Funk",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "copyfiles": "^2.1.0",
+    "log4js": "^4.1.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^2.6.3",
+    "simple-node-logger": "^18.12.22",
+    "ts-node": "^8.0.3",
+    "typescript": "^3.4.5"
+  },
+  "devDependencies": {
+    "prettier": "^1.17.0",
+    "tslint": "^5.15.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typings": "^2.1.1"
+  }
+}
