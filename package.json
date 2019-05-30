@@ -4,18 +4,16 @@
   "description": "Contains the ontology files, repeatedly used models and utility functions for a number of data scraping modules.",
   "main": "lib/api.js",
   "scripts": {
-    "build": "tsc",
-    "clean:dist": "npm-run-all clean:dist:*",
-    "clean:dist:rdf": "rimraf dist/ontology/**/*.*",
+    "build": "run-s clean:lib tsc copy:ontology",
+    "clean:lib": "rimraf lib/",
     "clean:logs": "rimraf logs/*log*",
     "copy:ontology": "npm-run-all copy:jsonld copy:owl",
-    "copy:jsonld": "copyfiles -u 1 ontology/*.json dist/ontology/jsonld/",
-    "copy:owl": "copyfiles -u 1 ontology/*.rdf dist/ontology/owl/",
+    "copy:jsonld": "copyfiles -u 1 ontology/*.jsonld lib/ontology/jsonld/",
+    "copy:owl": "copyfiles -u 1 ontology/*.rdf lib/ontology/owl/",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
-    "postbuild": "copyfiles -u 1 ontology/*.rdf lib/ontology/owl/",
-    "start": "run-s clean:logs clean:dist copy:ontology",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc"
   },
   "files": [
     "lib/**/*"
@@ -48,6 +46,7 @@
     "typescript": "^3.4.5"
   },
   "devDependencies": {
+    "https-proxy-agent": "^2.2.1",
     "prettier": "^1.17.0",
     "tslint": "^5.15.0",
     "tslint-config-prettier": "^1.18.0",
