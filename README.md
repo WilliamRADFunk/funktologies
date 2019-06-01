@@ -1,5 +1,5 @@
 # funktologies
-(Complete) Contains the ontology files, repeatedly used models and utility functions for a number of data scraping modules.
+Contains the ontology files, repeatedly used models and utility functions for a number of data scraping modules.
 
 Also serves as dependency module for the larger [factbook](https://github.com/WilliamRADFunk/factbook.git), [cia-world-leaders](https://github.com/WilliamRADFunk/cia-world-leaders.git), [all-airports](https://github.com/WilliamRADFunk/all-airports.git), and [data-glutton](https://github.com/WilliamRADFunk/data-glutton.git) modules, which culminates data from multiple locations and bridges them under a universal ontology.
 
