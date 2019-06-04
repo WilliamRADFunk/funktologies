@@ -1,6 +1,6 @@
 {
   "name": "funktologies",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Contains the ontology files, repeatedly used models and utility functions for a number of data scraping modules.",
   "main": "lib/api.js",
   "scripts": {
