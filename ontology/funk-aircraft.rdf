@@ -97,6 +97,8 @@
     <rdfs:comment>
       Number of places in a Helicopter Landing Zone that contain three unobstructed concentric circles of
       5, 15, and 25 meters in diameter respectively from inside out.
+
+      Light observation helicopters such as the OH-6 and OH-58D.
     </rdfs:comment>
     <rdfs:domain rdf:resource="&aircraft;HelicopterLandingZone"/>
     <rdfs:range rdf:resource="&xsd;integer"/>
@@ -108,6 +110,8 @@
     <rdfs:comment>
       Number of places in a Helicopter Landing Zone that contain three unobstructed concentric circles of
       10, 20, and 35 meters in diameter respectively from inside out.
+
+      Light utility and attack helicopters such as the UH-1H, H-65, and AH-1W.
     </rdfs:comment>
     <rdfs:domain rdf:resource="&aircraft;HelicopterLandingZone"/>
     <rdfs:range rdf:resource="&xsd;integer"/>
@@ -119,6 +123,8 @@
     <rdfs:comment>
       Number of places in a Helicopter Landing Zone that contain three unobstructed concentric circles of
       15, 35, and 50 meters in diameter respectively from inside out.
+
+      Medium utility and attack helicopters such as the UH-60, H-2, and AH-64.
     </rdfs:comment>
     <rdfs:domain rdf:resource="&aircraft;HelicopterLandingZone"/>
     <rdfs:range rdf:resource="&xsd;integer"/>
@@ -130,6 +136,8 @@
     <rdfs:comment>
       Number of places in a Helicopter Landing Zone that contain three unobstructed concentric circles of
       15, 35, and 80 meters in diameter respectively from inside out.
+
+      Cargo helicopters such as the CH-47, H-3 and CH-53, or with prior coordination.
     </rdfs:comment>
     <rdfs:domain rdf:resource="&aircraft;HelicopterLandingZone"/>
     <rdfs:range rdf:resource="&xsd;integer"/>
@@ -141,6 +149,8 @@
     <rdfs:comment>
       Number of places in a Helicopter Landing Zone that contain three unobstructed concentric circles of
       15, 60, and 100 meters in diameter respectively from inside out.
+
+      Slingload helicopters and aircraft of an unknown origin.
     </rdfs:comment>
     <rdfs:domain rdf:resource="&aircraft;HelicopterLandingZone"/>
     <rdfs:range rdf:resource="&xsd;integer"/>
@@ -152,6 +162,8 @@
     <rdfs:comment>
       Number of places in a Helicopter Landing Zone that contain three unobstructed concentric circles of
       15, 75, and 125 meters in diameter respectively from inside out.
+
+      Slingload long-line operations.
     </rdfs:comment>
     <rdfs:domain rdf:resource="&aircraft;HelicopterLandingZone"/>
     <rdfs:range rdf:resource="&xsd;integer"/>
@@ -163,6 +175,8 @@
     <rdfs:comment>
       Number of places in a Helicopter Landing Zone that contain three unobstructed concentric circles of
       15, 75, and 150 meters in diameter respectively from inside out.
+
+      Slingload operations with night vision goggles (NVG).
     </rdfs:comment>
     <rdfs:domain rdf:resource="&aircraft;HelicopterLandingZone"/>
     <rdfs:range rdf:resource="&xsd;integer"/>
@@ -179,48 +193,6 @@
   <!-- http://williamrobertfunk.com/ontologies/general#length -->
 
   <DatatypeProperty rdf:about="&general;length">
-    <rdfs:domain rdf:resource="&aircraft;HelicopterLandingZone"/>
-  </DatatypeProperty>
-
-  <!-- http://williamrobertfunk.com/ontologies/general#description -->
-
-  <DatatypeProperty rdf:about="&general;description">
-    <rdfs:domain rdf:resource="&aircraft;HelicopterLandingZone"/>
-  </DatatypeProperty>
-
-  <!-- http://www.w3.org/2003/01/geo/wgs84_pos#lat -->
-
-  <DataProperty rdf:about="&pos;lat">
-    <rdfs:domain rdf:resource="&aircraft;HelicopterLandingZone"/>
-  </DataProperty>
-
-  <!-- http://www.w3.org/2003/01/geo/wgs84_pos#long -->
-
-  <DataProperty rdf:about="&pos;long">
-    <rdfs:domain rdf:resource="&aircraft;HelicopterLandingZone"/>
-  </DataProperty>
-
-  <!-- http://www.w3.org/2003/01/geo/wgs84_pos#alt -->
-
-  <DataProperty rdf:about="&pos;alt">
-    <rdfs:domain rdf:resource="&aircraft;HelicopterLandingZone"/>
-  </DataProperty>
-
-  <!-- http://www.w3.org/2003/01/geo/wgs84_pos#lat_long -->
-
-  <DataProperty rdf:about="&pos;lat_long">
-    <rdfs:domain rdf:resource="&aircraft;HelicopterLandingZone"/>
-  </DataProperty>
-
-  <!-- http://williamrobertfunk.com/ontologies/general#condition -->
-
-  <DatatypeProperty rdf:about="&general;condition">
-    <rdfs:domain rdf:resource="&aircraft;HelicopterLandingZone"/>
-  </DatatypeProperty>
-
-  <!-- http://williamrobertfunk.com/ontologies/general#isComposite -->
-
-  <DatatypeProperty rdf:about="&general;isComposite">
     <rdfs:domain rdf:resource="&aircraft;HelicopterLandingZone"/>
   </DatatypeProperty>
 
