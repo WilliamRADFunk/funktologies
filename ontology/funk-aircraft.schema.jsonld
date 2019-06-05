@@ -20,6 +20,7 @@
       "rdfs:domain": {
         "@id": "aircraft:HelicopterLandingZone"
       },
+      "rdfs:label": "Landing Points (Size 1)",
       "rdfs:range": {
         "@id": "xsd:integer"
       }
@@ -31,6 +32,7 @@
       "rdfs:domain": {
         "@id": "aircraft:HelicopterLandingZone"
       },
+      "rdfs:label": "Landing Points (Size 2)",
       "rdfs:range": {
         "@id": "xsd:integer"
       }
@@ -42,6 +44,7 @@
       "rdfs:domain": {
         "@id": "aircraft:HelicopterLandingZone"
       },
+      "rdfs:label": "Landing Points (Size 3)",
       "rdfs:range": {
         "@id": "xsd:integer"
       }
@@ -53,6 +56,7 @@
       "rdfs:domain": {
         "@id": "aircraft:HelicopterLandingZone"
       },
+      "rdfs:label": "Landing Points (Size 4)",
       "rdfs:range": {
         "@id": "xsd:integer"
       }
@@ -64,6 +68,7 @@
       "rdfs:domain": {
         "@id": "aircraft:HelicopterLandingZone"
       },
+      "rdfs:label": "Landing Points (Size 5)",
       "rdfs:range": {
         "@id": "xsd:integer"
       }
@@ -75,19 +80,17 @@
       "rdfs:domain": {
         "@id": "aircraft:HelicopterLandingZone"
       },
+      "rdfs:label": "Landing Points (Size 6)",
       "rdfs:range": {
         "@id": "xsd:integer"
       }
     },
     {
-      "@id": "aircraft:numberOfLandingPointSize7",
-      "@type": "owl:DatatypeProperty",
-      "rdfs:comment": "\n      Number of places in a Helicopter Landing Zone that contain three unobstructed concentric circles of\n      15, 75, and 150 meters in diameter respectively from inside out.\n\n      Slingload operations with night vision goggles (NVG).\n    ",
-      "rdfs:domain": {
-        "@id": "aircraft:HelicopterLandingZone"
-      },
+      "@id": "aircraft:hasHelicopterLandingZone",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": "Helicopter Landing Zone",
       "rdfs:range": {
-        "@id": "xsd:integer"
+        "@id": "aircraft:HelicopterLandingZone"
       }
     },
     {
@@ -112,10 +115,28 @@
       }
     },
     {
-      "@id": "aircraft:hasHelicopterLandingZone",
-      "@type": "owl:ObjectProperty",
-      "rdfs:range": {
+      "@id": "http://williamrobertfunk.com/ontologies/aircraft",
+      "@type": "owl:Ontology",
+      "dc:contributor": "William R.A.D. Funk",
+      "dc:creator": "William R.A.D. Funk",
+      "dc:rights": "Copyright 2019 William R.A.D. Funk. All rights reserved.",
+      "owl:versionInfo": {
+        "@type": "xsd:decimal",
+        "@value": "1.0"
+      },
+      "rdfs:comment": "\n      Identifies application specific classes and annotations that are relevant\n      only to my associated applications.\n    ",
+      "rdfs:label": "Funk Ontology"
+    },
+    {
+      "@id": "aircraft:numberOfLandingPointSize7",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "\n      Number of places in a Helicopter Landing Zone that contain three unobstructed concentric circles of\n      15, 75, and 150 meters in diameter respectively from inside out.\n\n      Slingload operations with night vision goggles (NVG).\n    ",
+      "rdfs:domain": {
         "@id": "aircraft:HelicopterLandingZone"
+      },
+      "rdfs:label": "Landing Points (Size 7)",
+      "rdfs:range": {
+        "@id": "xsd:integer"
       }
     },
     {
@@ -138,19 +159,6 @@
       "rdfs:domain": {
         "@id": "aircraft:HelicopterLandingZone"
       }
-    },
-    {
-      "@id": "http://williamrobertfunk.com/ontologies/aircraft",
-      "@type": "owl:Ontology",
-      "dc:contributor": "William R.A.D. Funk",
-      "dc:creator": "William R.A.D. Funk",
-      "dc:rights": "Copyright 2019 William R.A.D. Funk. All rights reserved.",
-      "owl:versionInfo": {
-        "@type": "xsd:decimal",
-        "@value": "1.0"
-      },
-      "rdfs:comment": "\n      Identifies application specific classes and annotations that are relevant\n      only to my associated applications.\n    ",
-      "rdfs:label": "Funk Ontology"
     }
   ]
 }

@@ -64,6 +64,7 @@
   <!-- http://williamrobertfunk.com/ontologies/municipality#hasMunicipality -->
 
   <ObjectProperty rdf:about="&municipality;hasMunicipality">
+    <rdfs:label>Municipality</rdfs:label>
     <rdfs:range rdf:resource="&municipality;Municipality"/>
   </ObjectProperty>
 

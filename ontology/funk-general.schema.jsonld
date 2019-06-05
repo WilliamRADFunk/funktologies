@@ -27,6 +27,7 @@
     {
       "@id": "general:hasSurfaceMaterial",
       "@type": "owl:ObjectProperty",
+      "rdfs:label": "Surface Material",
       "rdfs:range": {
         "@id": "general:SurfaceMaterial"
       }
@@ -56,6 +57,7 @@
     {
       "@id": "general:hasLocation",
       "@type": "owl:ObjectProperty",
+      "rdfs:label": "Location",
       "rdfs:range": {
         "@id": "general:Location"
       }
@@ -63,8 +65,8 @@
     {
       "@id": "general:condition",
       "@type": [
-        "owl:FunctionalProperty",
-        "owl:DatatypeProperty"
+        "owl:DatatypeProperty",
+        "owl:FunctionalProperty"
       ],
       "rdfs:comment": "The qualitative condition of a thing (ie. poor, fair, good, etc.).",
       "rdfs:domain": {
@@ -252,6 +254,7 @@
     {
       "@id": "general:hasElevation",
       "@type": "owl:ObjectProperty",
+      "rdfs:label": "Elevation",
       "rdfs:range": {
         "@id": "general:Elevation"
       }

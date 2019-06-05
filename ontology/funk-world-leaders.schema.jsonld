@@ -50,6 +50,7 @@
       "rdfs:domain": {
         "@id": "country:Country"
       },
+      "rdfs:label": "Government Office",
       "rdfs:range": {
         "@id": "wleaders:GovernmentOffice"
       }
@@ -61,34 +62,9 @@
       "rdfs:domain": {
         "@id": "wleaders:GovernmentOffice"
       },
+      "rdfs:label": "Government Official",
       "rdfs:range": {
         "@id": "wleaders:Person"
-      }
-    },
-    {
-      "@id": "wleaders:appointedGovernmentOffice",
-      "@type": "owl:ObjectProperty",
-      "rdfs:comment": "\n      a government office to which this person is appointed.\n    ",
-      "rdfs:domain": {
-        "@id": "wleaders:Person"
-      },
-      "rdfs:range": {
-        "@id": "wleaders:GovernmentOffice"
-      }
-    },
-    {
-      "@id": "wleaders:regionSpecific",
-      "@type": [
-        "owl:DatatypeProperty",
-        "owl:FunctionalProperty"
-      ],
-      "rdfs:comment": "\n      Specific Region to which the government office applies\n      (ie. \"Chief Executive\" in China for Hong Kong, or Macau).\n    ",
-      "rdfs:domain": {
-        "@id": "wleaders:GovernmentOffice"
-      },
-      "rdfs:label": "Region Specific",
-      "rdfs:range": {
-        "@id": "xsd:string"
       }
     },
     {
@@ -103,6 +79,33 @@
       },
       "rdfs:comment": "\n      Identifies application specific classes and annotations that are relevant\n      only to my associated applications.\n    ",
       "rdfs:label": "Funk Ontology"
+    },
+    {
+      "@id": "wleaders:appointedGovernmentOffice",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": "\n      a government office to which this person is appointed.\n    ",
+      "rdfs:domain": {
+        "@id": "wleaders:Person"
+      },
+      "rdfs:label": "Appointed Government Office",
+      "rdfs:range": {
+        "@id": "wleaders:GovernmentOffice"
+      }
+    },
+    {
+      "@id": "wleaders:regionSpecific",
+      "@type": [
+        "owl:FunctionalProperty",
+        "owl:DatatypeProperty"
+      ],
+      "rdfs:comment": "\n      Specific Region to which the government office applies\n      (ie. \"Chief Executive\" in China for Hong Kong, or Macau).\n    ",
+      "rdfs:domain": {
+        "@id": "wleaders:GovernmentOffice"
+      },
+      "rdfs:label": "Region Specific",
+      "rdfs:range": {
+        "@id": "xsd:string"
+      }
     },
     {
       "@id": "wleaders:Person",

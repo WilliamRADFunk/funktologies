@@ -261,169 +261,193 @@
   <!-- http://williamrobertfunk.com/ontologies/country#hasNationalFlag -->
 
   <ObjectProperty rdf:about="&country;hasNationalFlag">
-      <rdfs:domain rdf:resource="&country;Country"/>
-      <rdfs:range rdf:resource="&country;NationalFlag"/>
+    <rdfs:label>National Flag</rdfs:label>
+    <rdfs:domain rdf:resource="&country;Country"/>
+    <rdfs:range rdf:resource="&country;NationalFlag"/>
   </ObjectProperty>
 
   <!-- http://williamrobertfunk.com/ontologies/country#hasBorderMap -->
 
   <ObjectProperty rdf:about="&country;hasBorderMap">
-      <rdfs:domain rdf:resource="&country;Country"/>
-      <rdfs:range rdf:resource="&country;BorderMap"/>
+    <rdfs:label>Border Map</rdfs:label>
+    <rdfs:domain rdf:resource="&country;Country"/>
+    <rdfs:range rdf:resource="&country;BorderMap"/>
   </ObjectProperty>
 
   <!-- http://williamrobertfunk.com/ontologies/country#hasRegionMap -->
 
   <ObjectProperty rdf:about="&country;hasRegionMap">
-      <rdfs:domain rdf:resource="&country;Country"/>
-      <rdfs:range rdf:resource="&country;RegionMap"/>
+    <rdfs:label>Region Map</rdfs:label>
+    <rdfs:domain rdf:resource="&country;Country"/>
+    <rdfs:range rdf:resource="&country;RegionMap"/>
   </ObjectProperty>
 
   <!-- http://williamrobertfunk.com/ontologies/country#hasSupplementalImage -->
 
   <ObjectProperty rdf:about="&country;hasSupplementalImage">
-      <rdfs:domain rdf:resource="&country;Country"/>
-      <rdfs:range rdf:resource="&image;Image"/>
+    <rdfs:label>Supplemental Image</rdfs:label>
+    <rdfs:domain rdf:resource="&country;Country"/>
+    <rdfs:range rdf:resource="&image;Image"/>
   </ObjectProperty>
 
   <!-- http://williamrobertfunk.com/ontologies/country#hasDomainArea -->
 
   <ObjectProperty rdf:about="&country;hasDomainArea">
-      <rdfs:domain rdf:resource="&country;Country"/>
-      <rdfs:range rdf:resource="&country;DomainArea"/>
+    <rdfs:label>Domain Area</rdfs:label>
+    <rdfs:domain rdf:resource="&country;Country"/>
+    <rdfs:range rdf:resource="&country;DomainArea"/>
   </ObjectProperty>
 
   <!-- http://williamrobertfunk.com/ontologies/country#hasCoast -->
 
   <ObjectProperty rdf:about="&country;hasCoast">
-      <rdfs:domain rdf:resource="&country;Country"/>
-      <rdfs:range rdf:resource="&country;Coast"/>
+    <rdfs:label>Coast</rdfs:label>
+    <rdfs:domain rdf:resource="&country;Country"/>
+    <rdfs:range rdf:resource="&country;Coast"/>
   </ObjectProperty>
 
   <!-- http://williamrobertfunk.com/ontologies/country#hasClimate -->
 
   <ObjectProperty rdf:about="&country;hasClimate">
-      <rdfs:domain rdf:resource="&country;Country"/>
-      <rdfs:range rdf:resource="&country;Climate"/>
+    <rdfs:label>Climate</rdfs:label>
+    <rdfs:domain rdf:resource="&country;Country"/>
+    <rdfs:range rdf:resource="&country;Climate"/>
   </ObjectProperty>
 
   <!-- http://williamrobertfunk.com/ontologies/country#hasClimateZone -->
 
   <ObjectProperty rdf:about="&country;hasClimateZone">
-      <rdfs:domain rdf:resource="&country;Climate"/>
-      <rdfs:range rdf:resource="&country;ClimateZone"/>
+    <rdfs:label>Climate Zone</rdfs:label>
+    <rdfs:domain rdf:resource="&country;Climate"/>
+    <rdfs:range rdf:resource="&country;ClimateZone"/>
   </ObjectProperty>
 
   <!-- http://williamrobertfunk.com/ontologies/country#hasBorderCountryPair -->
 
   <ObjectProperty rdf:about="&country;hasBorderCountryPair">
-      <rdfs:domain rdf:resource="&country;Country"/>
-      <rdfs:range rdf:resource="&country;BorderCountryPair"/>
+    <rdfs:label>Border Country Pair</rdfs:label>
+    <rdfs:domain rdf:resource="&country;Country"/>
+    <rdfs:range rdf:resource="&country;BorderCountryPair"/>
   </ObjectProperty>
 
   <!-- http://williamrobertfunk.com/ontologies/country#hasCountry -->
 
   <ObjectProperty rdf:about="&country;hasCountry">
-      <rdfs:domain rdf:resource="&country;BorderCountryPair"/>
-      <rdfs:range rdf:resource="&country;Country"/>
+    <rdfs:label>Country</rdfs:label>
+    <rdfs:domain rdf:resource="&country;BorderCountryPair"/>
+    <rdfs:range rdf:resource="&country;Country"/>
   </ObjectProperty>
 
   <!-- http://williamrobertfunk.com/ontologies/country#hasBorder -->
 
   <ObjectProperty rdf:about="&country;hasBorder">
-      <rdfs:domain rdf:resource="&country;Country"/>
-      <rdfs:range rdf:resource="&country;Border"/>
+    <rdfs:label>Border</rdfs:label>
+    <rdfs:domain rdf:resource="&country;Country"/>
+    <rdfs:range rdf:resource="&country;Border"/>
   </ObjectProperty>
 
   <!-- http://williamrobertfunk.com/ontologies/country#hasMaritimeClaim -->
 
   <ObjectProperty rdf:about="&country;hasMaritimeClaim">
-      <rdfs:domain rdf:resource="&country;Country"/>
-      <rdfs:range rdf:resource="&country;MaritimeClaim"/>
+    <rdfs:label>Maritime Claim</rdfs:label>
+    <rdfs:domain rdf:resource="&country;Country"/>
+    <rdfs:range rdf:resource="&country;MaritimeClaim"/>
   </ObjectProperty>
 
   <!-- http://williamrobertfunk.com/ontologies/country#hasNaturalResource -->
 
   <ObjectProperty rdf:about="&country;hasNaturalResource">
-      <rdfs:domain rdf:resource="&country;Country"/>
-      <rdfs:range rdf:resource="&country;NaturalResource"/>
+    <rdfs:label>Natural Resource</rdfs:label>
+    <rdfs:domain rdf:resource="&country;Country"/>
+    <rdfs:range rdf:resource="&country;NaturalResource"/>
   </ObjectProperty>
 
   <!-- http://williamrobertfunk.com/ontologies/country#hasTerrain -->
 
   <ObjectProperty rdf:about="&country;hasTerrain">
-      <rdfs:domain rdf:resource="&country;Country"/>
-      <rdfs:range rdf:resource="&country;Terrain"/>
+    <rdfs:label>Terrain</rdfs:label>
+    <rdfs:domain rdf:resource="&country;Country"/>
+    <rdfs:range rdf:resource="&country;Terrain"/>
   </ObjectProperty>
 
   <!-- http://williamrobertfunk.com/ontologies/country#hasLandUse -->
 
   <ObjectProperty rdf:about="&country;hasLandUse">
-      <rdfs:domain rdf:resource="&country;Country"/>
-      <rdfs:range rdf:resource="&country;LandUse"/>
+    <rdfs:label>Land Use</rdfs:label>
+    <rdfs:domain rdf:resource="&country;Country"/>
+    <rdfs:range rdf:resource="&country;LandUse"/>
   </ObjectProperty>
 
   <!-- http://williamrobertfunk.com/ontologies/country#hasAgriculturalLand -->
 
   <ObjectProperty rdf:about="&country;hasAgriculturalLand">
-      <rdfs:domain rdf:resource="&country;LandUse"/>
-      <rdfs:range rdf:resource="&country;AgriculturalLand"/>
+    <rdfs:label>Agricultural Land</rdfs:label>
+    <rdfs:domain rdf:resource="&country;LandUse"/>
+    <rdfs:range rdf:resource="&country;AgriculturalLand"/>
   </ObjectProperty>
 
   <!-- http://williamrobertfunk.com/ontologies/country#hasArableLand -->
 
   <ObjectProperty rdf:about="&country;hasArableLand">
-      <rdfs:domain rdf:resource="&country;LandUse"/>
-      <rdfs:range rdf:resource="&country;ArableLand"/>
+    <rdfs:label>Arable Land</rdfs:label>
+    <rdfs:domain rdf:resource="&country;LandUse"/>
+    <rdfs:range rdf:resource="&country;ArableLand"/>
   </ObjectProperty>
 
   <!-- http://williamrobertfunk.com/ontologies/country#hasForestLand -->
 
   <ObjectProperty rdf:about="&country;hasForestLand">
-      <rdfs:domain rdf:resource="&country;LandUse"/>
-      <rdfs:range rdf:resource="&country;ForestLand"/>
+    <rdfs:label>Forest Land</rdfs:label>
+    <rdfs:domain rdf:resource="&country;LandUse"/>
+    <rdfs:range rdf:resource="&country;ForestLand"/>
   </ObjectProperty>
 
   <!-- http://williamrobertfunk.com/ontologies/country#hasOtherLand -->
 
   <ObjectProperty rdf:about="&country;hasOtherLand">
-      <rdfs:domain rdf:resource="&country;LandUse"/>
-      <rdfs:range rdf:resource="&country;OtherLand"/>
+    <rdfs:label>Other Land</rdfs:label>
+    <rdfs:domain rdf:resource="&country;LandUse"/>
+    <rdfs:range rdf:resource="&country;OtherLand"/>
   </ObjectProperty>
 
   <!-- http://williamrobertfunk.com/ontologies/country#hasPermanentCropsLand -->
 
   <ObjectProperty rdf:about="&country;hasPermanentCropsLand">
-      <rdfs:domain rdf:resource="&country;LandUse"/>
-      <rdfs:range rdf:resource="&country;PermanentCropsLand"/>
+    <rdfs:label>Permanent Crops Land</rdfs:label>
+    <rdfs:domain rdf:resource="&country;LandUse"/>
+    <rdfs:range rdf:resource="&country;PermanentCropsLand"/>
   </ObjectProperty>
 
   <!-- http://williamrobertfunk.com/ontologies/country#hasPermanentPastureLand -->
 
   <ObjectProperty rdf:about="&country;hasPermanentPastureLand">
-      <rdfs:domain rdf:resource="&country;LandUse"/>
-      <rdfs:range rdf:resource="&country;PermanentPastureLand"/>
+    <rdfs:label>Permanent Pasture Land</rdfs:label>
+    <rdfs:domain rdf:resource="&country;LandUse"/>
+    <rdfs:range rdf:resource="&country;PermanentPastureLand"/>
   </ObjectProperty>
 
   <!-- http://williamrobertfunk.com/ontologies/country#hasArtificiallyIrrigatedLand -->
 
   <ObjectProperty rdf:about="&country;hasArtificiallyIrrigatedLand">
-      <rdfs:domain rdf:resource="&country;Country"/>
-      <rdfs:range rdf:resource="&country;ArtificiallyIrrigatedLand"/>
+    <rdfs:label>Artificially Irrigated Land</rdfs:label>
+    <rdfs:domain rdf:resource="&country;Country"/>
+    <rdfs:range rdf:resource="&country;ArtificiallyIrrigatedLand"/>
   </ObjectProperty>
 
   <!-- http://williamrobertfunk.com/ontologies/country#hasNaturalHazard -->
 
   <ObjectProperty rdf:about="&country;hasNaturalHazard">
-      <rdfs:domain rdf:resource="&country;Country"/>
-      <rdfs:range rdf:resource="&country;NaturalHazard"/>
+    <rdfs:label>Natural Hazard</rdfs:label>
+    <rdfs:domain rdf:resource="&country;Country"/>
+    <rdfs:range rdf:resource="&country;NaturalHazard"/>
   </ObjectProperty>
 
   <!-- http://williamrobertfunk.com/ontologies/country#hasGeographicNote -->
 
   <ObjectProperty rdf:about="&country;hasGeographicNote">
-      <rdfs:domain rdf:resource="&country;Country"/>
-      <rdfs:range rdf:resource="&country;GeographicNote"/>
+    <rdfs:label>Geographic Note</rdfs:label>
+    <rdfs:domain rdf:resource="&country;Country"/>
+    <rdfs:range rdf:resource="&country;GeographicNote"/>
   </ObjectProperty>
 
   <!-- General Ontology Extensions -->

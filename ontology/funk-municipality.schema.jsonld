@@ -13,6 +13,19 @@
   },
   "@graph": [
     {
+      "@id": "http://williamrobertfunk.com/ontologies/municipality",
+      "@type": "owl:Ontology",
+      "dc:contributor": "William R.A.D. Funk",
+      "dc:creator": "William R.A.D. Funk",
+      "dc:rights": "Copyright 2019 William R.A.D. Funk. All rights reserved.",
+      "owl:versionInfo": {
+        "@type": "xsd:decimal",
+        "@value": "1.1"
+      },
+      "rdfs:comment": "\n      Identifies application specific classes and annotations that are relevant\n      only to my associated applications.\n    ",
+      "rdfs:label": "Funk Ontology"
+    },
+    {
       "@id": "municipality:Municipality",
       "@type": "owl:Class",
       "blade:navClass": true,
@@ -30,19 +43,6 @@
       }
     },
     {
-      "@id": "http://williamrobertfunk.com/ontologies/municipality",
-      "@type": "owl:Ontology",
-      "dc:contributor": "William R.A.D. Funk",
-      "dc:creator": "William R.A.D. Funk",
-      "dc:rights": "Copyright 2019 William R.A.D. Funk. All rights reserved.",
-      "owl:versionInfo": {
-        "@type": "xsd:decimal",
-        "@value": "1.1"
-      },
-      "rdfs:comment": "\n      Identifies application specific classes and annotations that are relevant\n      only to my associated applications.\n    ",
-      "rdfs:label": "Funk Ontology"
-    },
-    {
       "@id": "general:wikiURI",
       "@type": "owl:DatatypeProperty",
       "rdfs:domain": {
@@ -52,6 +52,7 @@
     {
       "@id": "municipality:hasMunicipality",
       "@type": "owl:ObjectProperty",
+      "rdfs:label": "Municipality",
       "rdfs:range": {
         "@id": "municipality:Municipality"
       }

@@ -84,12 +84,14 @@
   <!-- http://williamrobertfunk.com/ontologies/airport#hasAirport -->
 
   <ObjectProperty rdf:about="&airport;hasAirport">
+    <rdfs:label>Airport</rdfs:label>
     <rdfs:range rdf:resource="&airport;Airport"/>
   </ObjectProperty>
 
   <!-- http://williamrobertfunk.com/ontologies/airport#hasRunway -->
 
   <ObjectProperty rdf:about="&airport;hasRunway">
+    <rdfs:label>Runway</rdfs:label>
     <rdfs:domain rdf:resource="&airport;Airport"/>
     <rdfs:range rdf:resource="&airport;Runway"/>
   </ObjectProperty>

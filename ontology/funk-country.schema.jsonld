@@ -17,11 +17,23 @@
   },
   "@graph": [
     {
+      "@id": "country:hasGeographicNote",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "country:Country"
+      },
+      "rdfs:label": "Geographic Note",
+      "rdfs:range": {
+        "@id": "country:GeographicNote"
+      }
+    },
+    {
       "@id": "country:hasDomainArea",
       "@type": "owl:ObjectProperty",
       "rdfs:domain": {
         "@id": "country:Country"
       },
+      "rdfs:label": "Domain Area",
       "rdfs:range": {
         "@id": "country:DomainArea"
       }
@@ -34,11 +46,15 @@
       "rdfs:label": "Land Use"
     },
     {
-      "@id": "country:NaturalResource",
-      "@type": "owl:Class",
-      "blade:navClass": true,
-      "rdfs:comment": "\n      Material or substance such as minerals, forests, water,and fertile land\n      that occur in nature and can be used for economic gain.\n    ",
-      "rdfs:label": "Natural Resource"
+      "@id": "country:hasCountry",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "country:BorderCountryPair"
+      },
+      "rdfs:label": "Country",
+      "rdfs:range": {
+        "@id": "country:Country"
+      }
     },
     {
       "@id": "country:climateZoneDescription",
@@ -53,13 +69,14 @@
       }
     },
     {
-      "@id": "country:hasCountry",
+      "@id": "country:hasRegionMap",
       "@type": "owl:ObjectProperty",
       "rdfs:domain": {
-        "@id": "country:BorderCountryPair"
-      },
-      "rdfs:range": {
         "@id": "country:Country"
+      },
+      "rdfs:label": "Region Map",
+      "rdfs:range": {
+        "@id": "country:RegionMap"
       }
     },
     {
@@ -95,38 +112,6 @@
       }
     },
     {
-      "@id": "country:lastEstimated",
-      "@type": "owl:DatatypeProperty",
-      "rdfs:comment": "The last date/year the field was last estimated",
-      "rdfs:domain": [
-        {
-          "@id": "country:AgriculturalLand"
-        },
-        {
-          "@id": "country:ArtificiallyIrrigatedLand"
-        },
-        {
-          "@id": "country:OtherLand"
-        },
-        {
-          "@id": "country:PermanentPastureLand"
-        },
-        {
-          "@id": "country:PermanentCropsLand"
-        },
-        {
-          "@id": "country:ArableLand"
-        },
-        {
-          "@id": "country:LandUse"
-        }
-      ],
-      "rdfs:label": "Last Estimated",
-      "rdfs:range": {
-        "@id": "xsd:string"
-      }
-    },
-    {
       "@id": "country:supplementalExplanation",
       "@type": "owl:DatatypeProperty",
       "rdfs:comment": "\n      When details are given that don't readily fit into any given category, they go here.\n    ",
@@ -151,29 +136,14 @@
       }
     },
     {
-      "@id": "country:regionCodeISO",
-      "@type": [
-        "owl:FunctionalProperty",
-        "owl:DatatypeProperty"
-      ],
-      "rdfs:comment": "\n      Hyphen-delimited region code within a country assigned by the International Organization for Standardization\n    ",
-      "rdfs:domain": {
-        "@id": "country:Country"
+      "@id": "country:Country",
+      "@type": "owl:Class",
+      "blade:navClass": true,
+      "owl:equivalentClass": {
+        "@id": "http://dbpedia.org/ontology/Country"
       },
-      "rdfs:label": "ISO Country-Region Code",
-      "rdfs:range": {
-        "@id": "xsd:string"
-      }
-    },
-    {
-      "@id": "country:hasNaturalResource",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "country:Country"
-      },
-      "rdfs:range": {
-        "@id": "country:NaturalResource"
-      }
+      "rdfs:comment": "a nation with its own government, occupying a particular territory.",
+      "rdfs:label": "Country"
     },
     {
       "@id": "country:continentalShelfModifier",
@@ -217,46 +187,62 @@
       }
     },
     {
+      "@id": "country:lastEstimated",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "The last date/year the field was last estimated",
+      "rdfs:domain": [
+        {
+          "@id": "country:LandUse"
+        },
+        {
+          "@id": "country:OtherLand"
+        },
+        {
+          "@id": "country:ArtificiallyIrrigatedLand"
+        },
+        {
+          "@id": "country:PermanentPastureLand"
+        },
+        {
+          "@id": "country:AgriculturalLand"
+        },
+        {
+          "@id": "country:ArableLand"
+        },
+        {
+          "@id": "country:PermanentCropsLand"
+        }
+      ],
+      "rdfs:label": "Last Estimated",
+      "rdfs:range": {
+        "@id": "xsd:string"
+      }
+    },
+    {
       "@id": "country:hasArtificiallyIrrigatedLand",
       "@type": "owl:ObjectProperty",
       "rdfs:domain": {
         "@id": "country:Country"
       },
+      "rdfs:label": "Artificially Irrigated Land",
       "rdfs:range": {
         "@id": "country:ArtificiallyIrrigatedLand"
       }
     },
     {
-      "@id": "country:PermanentCropsLand",
-      "@type": "owl:Class",
-      "blade:navClass": true,
-      "rdfs:comment": "Percentage of land set aside permanently for use in growing crops.",
-      "rdfs:label": "Permanent Crops Land"
-    },
-    {
-      "@id": "country:contiguousZone",
-      "@type": "owl:DatatypeProperty",
-      "rdfs:comment": "\n      Length of sea belt belonging to sovereign coastal state for legally protecting against infringement of its customs,\n      fiscal, immigration, or sanitary laws and regulations.\n    ",
+      "@id": "country:regionCodeISO",
+      "@type": [
+        "owl:FunctionalProperty",
+        "owl:DatatypeProperty"
+      ],
+      "rdfs:comment": "\n      Hyphen-delimited region code within a country assigned by the International Organization for Standardization\n    ",
       "rdfs:domain": {
-        "@id": "country:MaritimeClaim"
+        "@id": "country:Country"
       },
-      "rdfs:label": "Contiguous Zone",
+      "rdfs:label": "ISO Country-Region Code",
       "rdfs:range": {
-        "@id": "xsd:integer"
+        "@id": "xsd:string"
       }
-    },
-    {
-      "@id": "http://williamrobertfunk.com/ontologies/country",
-      "@type": "owl:Ontology",
-      "dc:contributor": "William R.A.D. Funk",
-      "dc:creator": "William R.A.D. Funk",
-      "dc:rights": "Copyright 2019 William R.A.D. Funk. All rights reserved.",
-      "owl:versionInfo": {
-        "@type": "xsd:decimal",
-        "@value": "1.7"
-      },
-      "rdfs:comment": "\n      Identifies application specific classes and annotations that are relevant\n      only to my associated applications.\n    ",
-      "rdfs:label": "Funk Ontology"
     },
     {
       "@id": "general:hasLocation",
@@ -269,11 +255,16 @@
       }
     },
     {
-      "@id": "country:Border",
-      "@type": "owl:Class",
-      "blade:navClass": true,
-      "rdfs:comment": "Total border belonging to a soverign nation.",
-      "rdfs:label": "National Border"
+      "@id": "country:contiguousZone",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "\n      Length of sea belt belonging to sovereign coastal state for legally protecting against infringement of its customs,\n      fiscal, immigration, or sanitary laws and regulations.\n    ",
+      "rdfs:domain": {
+        "@id": "country:MaritimeClaim"
+      },
+      "rdfs:label": "Contiguous Zone",
+      "rdfs:range": {
+        "@id": "xsd:integer"
+      }
     },
     {
       "@id": "country:RegionMap",
@@ -291,6 +282,7 @@
       "rdfs:domain": {
         "@id": "country:LandUse"
       },
+      "rdfs:label": "Arable Land",
       "rdfs:range": {
         "@id": "country:ArableLand"
       }
@@ -316,6 +308,7 @@
       "rdfs:domain": {
         "@id": "country:Country"
       },
+      "rdfs:label": "Coast",
       "rdfs:range": {
         "@id": "country:Coast"
       }
@@ -335,11 +328,25 @@
       "rdfs:label": "Natural Hazard"
     },
     {
+      "@id": "http://williamrobertfunk.com/ontologies/country",
+      "@type": "owl:Ontology",
+      "dc:contributor": "William R.A.D. Funk",
+      "dc:creator": "William R.A.D. Funk",
+      "dc:rights": "Copyright 2019 William R.A.D. Funk. All rights reserved.",
+      "owl:versionInfo": {
+        "@type": "xsd:decimal",
+        "@value": "1.7"
+      },
+      "rdfs:comment": "\n      Identifies application specific classes and annotations that are relevant\n      only to my associated applications.\n    ",
+      "rdfs:label": "Funk Ontology"
+    },
+    {
       "@id": "country:hasNationalFlag",
       "@type": "owl:ObjectProperty",
       "rdfs:domain": {
         "@id": "country:Country"
       },
+      "rdfs:label": "National Flag",
       "rdfs:range": {
         "@id": "country:NationalFlag"
       }
@@ -352,15 +359,14 @@
       "rdfs:label": "Climate Zone"
     },
     {
-      "@id": "country:resourceName",
-      "@type": "owl:DatatypeProperty",
-      "rdfs:comment": "The name of the resource (ie. coal, copper, salt, fish)",
+      "@id": "country:hasOtherLand",
+      "@type": "owl:ObjectProperty",
       "rdfs:domain": {
-        "@id": "country:NaturalResource"
+        "@id": "country:LandUse"
       },
-      "rdfs:label": "Resource Name",
+      "rdfs:label": "Other Land",
       "rdfs:range": {
-        "@id": "xsd:string"
+        "@id": "country:OtherLand"
       }
     },
     {
@@ -407,14 +413,11 @@
       }
     },
     {
-      "@id": "country:hasAgriculturalLand",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "country:LandUse"
-      },
-      "rdfs:range": {
-        "@id": "country:AgriculturalLand"
-      }
+      "@id": "country:PermanentCropsLand",
+      "@type": "owl:Class",
+      "blade:navClass": true,
+      "rdfs:comment": "Percentage of land set aside permanently for use in growing crops.",
+      "rdfs:label": "Permanent Crops Land"
     },
     {
       "@id": "country:hasPermanentPastureLand",
@@ -422,149 +425,9 @@
       "rdfs:domain": {
         "@id": "country:LandUse"
       },
+      "rdfs:label": "Permanent Pasture Land",
       "rdfs:range": {
         "@id": "country:PermanentPastureLand"
-      }
-    },
-    {
-      "@id": "country:background",
-      "@type": [
-        "owl:FunctionalProperty",
-        "owl:DatatypeProperty"
-      ],
-      "rdfs:comment": "Description of variable length that summarizes the history of a thing.",
-      "rdfs:domain": {
-        "@id": "country:Country"
-      },
-      "rdfs:label": "Background information",
-      "rdfs:range": {
-        "@id": "xsd:string"
-      }
-    },
-    {
-      "@id": "municipality:hasMunicipality",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "country:Country"
-      }
-    },
-    {
-      "@id": "country:waterArea",
-      "@type": "owl:DatatypeProperty",
-      "rdfs:comment": "Total water area associated with the entity to which it's attached.",
-      "rdfs:domain": {
-        "@id": "country:DomainArea"
-      },
-      "rdfs:label": "Water Area",
-      "rdfs:range": {
-        "@id": "xsd:string"
-      }
-    },
-    {
-      "@id": "country:BorderCountryPair",
-      "@type": "owl:Class",
-      "blade:navClass": true,
-      "rdfs:comment": "Two countries that share a land border.",
-      "rdfs:label": "Border Country Pair"
-    },
-    {
-      "@id": "country:Climate",
-      "@type": "owl:Class",
-      "blade:navClass": true,
-      "rdfs:comment": "The weather conditions prevailing in an area in general or over a long period.",
-      "rdfs:label": "Climate"
-    },
-    {
-      "@id": "general:unit",
-      "@type": "owl:DatatypeProperty",
-      "rdfs:domain": [
-        {
-          "@id": "country:BorderCountryPair"
-        },
-        {
-          "@id": "country:MaritimeClaim"
-        },
-        {
-          "@id": "country:DomainArea"
-        },
-        {
-          "@id": "country:Coast"
-        },
-        {
-          "@id": "country:ArtificiallyIrrigatedLand"
-        },
-        {
-          "@id": "country:Border"
-        }
-      ]
-    },
-    {
-      "@id": "country:hasPermanentCropsLand",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "country:LandUse"
-      },
-      "rdfs:range": {
-        "@id": "country:PermanentCropsLand"
-      }
-    },
-    {
-      "@id": "country:AgriculturalLand",
-      "@type": "owl:Class",
-      "blade:navClass": true,
-      "rdfs:comment": "Percentage of land used for agricultural purposes.",
-      "rdfs:label": "Agricultural Land"
-    },
-    {
-      "@id": "country:hasClimate",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "country:Country"
-      },
-      "rdfs:range": {
-        "@id": "country:Climate"
-      }
-    },
-    {
-      "@id": "country:totalLandBorder",
-      "@type": "owl:DatatypeProperty",
-      "rdfs:comment": "Total length of distance by land of a country's border.",
-      "rdfs:domain": {
-        "@id": "country:Border"
-      },
-      "rdfs:label": "Total Land Border",
-      "rdfs:range": {
-        "@id": "xsd:string"
-      }
-    },
-    {
-      "@id": "country:hasRegionMap",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "country:Country"
-      },
-      "rdfs:range": {
-        "@id": "country:RegionMap"
-      }
-    },
-    {
-      "@id": "country:hasForestLand",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "country:LandUse"
-      },
-      "rdfs:range": {
-        "@id": "country:ForestLand"
-      }
-    },
-    {
-      "@id": "country:hasLandUse",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "country:Country"
-      },
-      "rdfs:range": {
-        "@id": "country:LandUse"
       }
     },
     {
@@ -580,11 +443,153 @@
       }
     },
     {
+      "@id": "municipality:hasMunicipality",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "country:Country"
+      }
+    },
+    {
       "@id": "country:GeographicNote",
       "@type": "owl:Class",
       "blade:navClass": true,
       "rdfs:comment": "\n      An additional description on a place's geography.\n      The significance of it's physical location in the larger world.\n    ",
       "rdfs:label": "Geographic Note"
+    },
+    {
+      "@id": "country:ArtificiallyIrrigatedLand",
+      "@type": "owl:Class",
+      "blade:navClass": true,
+      "rdfs:comment": "\n      Percentage of land artificially irrigated.\n    ",
+      "rdfs:label": "Artificially Irrigated Land"
+    },
+    {
+      "@id": "country:Climate",
+      "@type": "owl:Class",
+      "blade:navClass": true,
+      "rdfs:comment": "The weather conditions prevailing in an area in general or over a long period.",
+      "rdfs:label": "Climate"
+    },
+    {
+      "@id": "general:unit",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:domain": [
+        {
+          "@id": "country:Border"
+        },
+        {
+          "@id": "country:ArtificiallyIrrigatedLand"
+        },
+        {
+          "@id": "country:DomainArea"
+        },
+        {
+          "@id": "country:BorderCountryPair"
+        },
+        {
+          "@id": "country:Coast"
+        },
+        {
+          "@id": "country:MaritimeClaim"
+        }
+      ]
+    },
+    {
+      "@id": "country:hasPermanentCropsLand",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "country:LandUse"
+      },
+      "rdfs:label": "Permanent Crops Land",
+      "rdfs:range": {
+        "@id": "country:PermanentCropsLand"
+      }
+    },
+    {
+      "@id": "country:AgriculturalLand",
+      "@type": "owl:Class",
+      "blade:navClass": true,
+      "rdfs:comment": "Percentage of land used for agricultural purposes.",
+      "rdfs:label": "Agricultural Land"
+    },
+    {
+      "@id": "country:MaritimeClaim",
+      "@type": "owl:Class",
+      "blade:navClass": true,
+      "rdfs:comment": "\n      The adjacent belt of sea that extends beyond a coastal state's land territory and internal waters.\n      Includes airspace over that belt of sea.\n    ",
+      "rdfs:label": "Maritime Claim"
+    },
+    {
+      "@id": "country:totalLandBorder",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "Total length of distance by land of a country's border.",
+      "rdfs:domain": {
+        "@id": "country:Border"
+      },
+      "rdfs:label": "Total Land Border",
+      "rdfs:range": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "country:countryCodeISO",
+      "@type": [
+        "owl:DatatypeProperty",
+        "owl:FunctionalProperty"
+      ],
+      "rdfs:comment": "\n      Two digit country code assigned by the International Organization for Standardization\n    ",
+      "rdfs:domain": {
+        "@id": "country:Country"
+      },
+      "rdfs:label": "ISO Country Code",
+      "rdfs:range": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "country:hasForestLand",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "country:LandUse"
+      },
+      "rdfs:label": "Forest Land",
+      "rdfs:range": {
+        "@id": "country:ForestLand"
+      }
+    },
+    {
+      "@id": "country:hasLandUse",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "country:Country"
+      },
+      "rdfs:label": "Land Use",
+      "rdfs:range": {
+        "@id": "country:LandUse"
+      }
+    },
+    {
+      "@id": "country:waterArea",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "Total water area associated with the entity to which it's attached.",
+      "rdfs:domain": {
+        "@id": "country:DomainArea"
+      },
+      "rdfs:label": "Water Area",
+      "rdfs:range": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "country:hasNaturalResource",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "country:Country"
+      },
+      "rdfs:label": "Natural Resource",
+      "rdfs:range": {
+        "@id": "country:NaturalResource"
+      }
     },
     {
       "@id": "country:DomainArea",
@@ -599,18 +604,21 @@
       "rdfs:domain": {
         "@id": "country:Country"
       },
+      "rdfs:label": "Supplemental Image",
       "rdfs:range": {
         "@id": "image:Image"
       }
     },
     {
-      "@id": "country:hasTerrain",
-      "@type": "owl:ObjectProperty",
+      "@id": "country:resourceName",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": "The name of the resource (ie. coal, copper, salt, fish)",
       "rdfs:domain": {
-        "@id": "country:Country"
+        "@id": "country:NaturalResource"
       },
+      "rdfs:label": "Resource Name",
       "rdfs:range": {
-        "@id": "country:Terrain"
+        "@id": "xsd:string"
       }
     },
     {
@@ -619,6 +627,7 @@
       "rdfs:domain": {
         "@id": "country:Country"
       },
+      "rdfs:label": "Natural Hazard",
       "rdfs:range": {
         "@id": "country:NaturalHazard"
       }
@@ -631,24 +640,36 @@
       }
     },
     {
-      "@id": "country:hasOtherLand",
+      "@id": "country:hasAgriculturalLand",
       "@type": "owl:ObjectProperty",
       "rdfs:domain": {
         "@id": "country:LandUse"
       },
+      "rdfs:label": "Agricultural Land",
       "rdfs:range": {
-        "@id": "country:OtherLand"
+        "@id": "country:AgriculturalLand"
       }
     },
     {
-      "@id": "country:hasBorderCountryPair",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "country:Country"
-      },
-      "rdfs:range": {
-        "@id": "country:BorderCountryPair"
-      }
+      "@id": "country:NaturalResource",
+      "@type": "owl:Class",
+      "blade:navClass": true,
+      "rdfs:comment": "\n      Material or substance such as minerals, forests, water,and fertile land\n      that occur in nature and can be used for economic gain.\n    ",
+      "rdfs:label": "Natural Resource"
+    },
+    {
+      "@id": "country:BorderCountryPair",
+      "@type": "owl:Class",
+      "blade:navClass": true,
+      "rdfs:comment": "Two countries that share a land border.",
+      "rdfs:label": "Border Country Pair"
+    },
+    {
+      "@id": "country:Border",
+      "@type": "owl:Class",
+      "blade:navClass": true,
+      "rdfs:comment": "Total border belonging to a soverign nation.",
+      "rdfs:label": "National Border"
     },
     {
       "@id": "general:description",
@@ -680,16 +701,25 @@
       "rdfs:domain": {
         "@id": "country:Country"
       },
+      "rdfs:label": "Maritime Claim",
       "rdfs:range": {
         "@id": "country:MaritimeClaim"
       }
     },
     {
-      "@id": "country:ArtificiallyIrrigatedLand",
-      "@type": "owl:Class",
-      "blade:navClass": true,
-      "rdfs:comment": "\n      Percentage of land artificially irrigated.\n    ",
-      "rdfs:label": "Artificially Irrigated Land"
+      "@id": "country:background",
+      "@type": [
+        "owl:DatatypeProperty",
+        "owl:FunctionalProperty"
+      ],
+      "rdfs:comment": "Description of variable length that summarizes the history of a thing.",
+      "rdfs:domain": {
+        "@id": "country:Country"
+      },
+      "rdfs:label": "Background information",
+      "rdfs:range": {
+        "@id": "xsd:string"
+      }
     },
     {
       "@id": "country:territorialSea",
@@ -709,6 +739,7 @@
       "rdfs:domain": {
         "@id": "country:Climate"
       },
+      "rdfs:label": "Climate Zone",
       "rdfs:range": {
         "@id": "country:ClimateZone"
       }
@@ -719,6 +750,7 @@
       "rdfs:domain": {
         "@id": "country:Country"
       },
+      "rdfs:label": "Border",
       "rdfs:range": {
         "@id": "country:Border"
       }
@@ -729,10 +761,10 @@
       "rdfs:comment": "Total area associated with the entity to which it's attached.",
       "rdfs:domain": [
         {
-          "@id": "country:ArtificiallyIrrigatedLand"
+          "@id": "country:DomainArea"
         },
         {
-          "@id": "country:DomainArea"
+          "@id": "country:ArtificiallyIrrigatedLand"
         }
       ],
       "rdfs:label": "Total Area",
@@ -741,38 +773,15 @@
       }
     },
     {
-      "@id": "general:percentage",
-      "@type": "owl:DatatypeProperty",
-      "rdfs:domain": [
-        {
-          "@id": "country:OtherLand"
-        },
-        {
-          "@id": "country:PermanentPastureLand"
-        },
-        {
-          "@id": "country:ArableLand"
-        },
-        {
-          "@id": "country:AgriculturalLand"
-        },
-        {
-          "@id": "country:PermanentCropsLand"
-        },
-        {
-          "@id": "country:LandUse"
-        }
-      ]
-    },
-    {
-      "@id": "country:Country",
-      "@type": "owl:Class",
-      "blade:navClass": true,
-      "owl:equivalentClass": {
-        "@id": "http://dbpedia.org/ontology/Country"
+      "@id": "country:hasTerrain",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "country:Country"
       },
-      "rdfs:comment": "a nation with its own government, occupying a particular territory.",
-      "rdfs:label": "Country"
+      "rdfs:label": "Terrain",
+      "rdfs:range": {
+        "@id": "country:Terrain"
+      }
     },
     {
       "@id": "general:length",
@@ -787,6 +796,7 @@
       "rdfs:domain": {
         "@id": "country:Country"
       },
+      "rdfs:label": "Border Map",
       "rdfs:range": {
         "@id": "country:BorderMap"
       }
@@ -838,13 +848,38 @@
       }
     },
     {
-      "@id": "country:hasGeographicNote",
+      "@id": "general:percentage",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:domain": [
+        {
+          "@id": "country:PermanentPastureLand"
+        },
+        {
+          "@id": "country:LandUse"
+        },
+        {
+          "@id": "country:PermanentCropsLand"
+        },
+        {
+          "@id": "country:ArableLand"
+        },
+        {
+          "@id": "country:AgriculturalLand"
+        },
+        {
+          "@id": "country:OtherLand"
+        }
+      ]
+    },
+    {
+      "@id": "country:hasBorderCountryPair",
       "@type": "owl:ObjectProperty",
       "rdfs:domain": {
         "@id": "country:Country"
       },
+      "rdfs:label": "Border Country Pair",
       "rdfs:range": {
-        "@id": "country:GeographicNote"
+        "@id": "country:BorderCountryPair"
       }
     },
     {
@@ -867,21 +902,6 @@
       "rdfs:label": "Arable Land"
     },
     {
-      "@id": "country:countryCodeISO",
-      "@type": [
-        "owl:FunctionalProperty",
-        "owl:DatatypeProperty"
-      ],
-      "rdfs:comment": "\n      Two digit country code assigned by the International Organization for Standardization\n    ",
-      "rdfs:domain": {
-        "@id": "country:Country"
-      },
-      "rdfs:label": "ISO Country Code",
-      "rdfs:range": {
-        "@id": "xsd:string"
-      }
-    },
-    {
       "@id": "country:Coast",
       "@type": "owl:Class",
       "blade:navClass": true,
@@ -896,11 +916,15 @@
       }
     },
     {
-      "@id": "country:MaritimeClaim",
-      "@type": "owl:Class",
-      "blade:navClass": true,
-      "rdfs:comment": "\n      The adjacent belt of sea that extends beyond a coastal state's land territory and internal waters.\n      Includes airspace over that belt of sea.\n    ",
-      "rdfs:label": "Maritime Claim"
+      "@id": "country:hasClimate",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "country:Country"
+      },
+      "rdfs:label": "Climate",
+      "rdfs:range": {
+        "@id": "country:Climate"
+      }
     },
     {
       "@id": "country:exclusiveEconomicZone",

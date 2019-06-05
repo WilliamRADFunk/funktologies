@@ -85,18 +85,21 @@
   <!-- http://williamrobertfunk.com/ontologies/general#hasElevation -->
 
   <ObjectProperty rdf:about="&general;hasElevation">
+    <rdfs:label>Elevation</rdfs:label>
     <rdfs:range rdf:resource="&general;Elevation"/>
   </ObjectProperty>
 
   <!-- http://williamrobertfunk.com/ontologies/general#hasLocation -->
 
   <ObjectProperty rdf:about="&general;hasLocation">
+    <rdfs:label>Location</rdfs:label>
     <rdfs:range rdf:resource="&general;Location"/>
   </ObjectProperty>
 
   <!-- http://williamrobertfunk.com/ontologies/general#hasSurfaceMaterial -->
 
   <ObjectProperty rdf:about="&general;hasSurfaceMaterial">
+    <rdfs:label>Surface Material</rdfs:label>
     <rdfs:range rdf:resource="&general;SurfaceMaterial"/>
   </ObjectProperty>
 

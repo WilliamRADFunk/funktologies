@@ -66,6 +66,7 @@
   <!-- http://williamrobertfunk.com/ontologies/general#hasHelicopterLandingZone -->
 
   <ObjectProperty rdf:about="&aircraft;hasHelicopterLandingZone">
+    <rdfs:label>Helicopter Landing Zone</rdfs:label>
     <rdfs:range rdf:resource="&aircraft;HelicopterLandingZone"/>
   </ObjectProperty>
 
@@ -94,6 +95,7 @@
   <!-- http://williamrobertfunk.com/ontologies/aircraft#numberOfLandingPointSize1 -->
 
   <DatatypeProperty rdf:about="&aircraft;numberOfLandingPointSize1">
+    <rdfs:label>Landing Points (Size 1)</rdfs:label>
     <rdfs:comment>
       Number of places in a Helicopter Landing Zone that contain three unobstructed concentric circles of
       5, 15, and 25 meters in diameter respectively from inside out.
@@ -107,6 +109,7 @@
   <!-- http://williamrobertfunk.com/ontologies/aircraft#numberOfLandingPointSize2 -->
 
   <DatatypeProperty rdf:about="&aircraft;numberOfLandingPointSize2">
+    <rdfs:label>Landing Points (Size 2)</rdfs:label>
     <rdfs:comment>
       Number of places in a Helicopter Landing Zone that contain three unobstructed concentric circles of
       10, 20, and 35 meters in diameter respectively from inside out.
@@ -120,6 +123,7 @@
   <!-- http://williamrobertfunk.com/ontologies/aircraft#numberOfLandingPointSize3 -->
 
   <DatatypeProperty rdf:about="&aircraft;numberOfLandingPointSize3">
+    <rdfs:label>Landing Points (Size 3)</rdfs:label>
     <rdfs:comment>
       Number of places in a Helicopter Landing Zone that contain three unobstructed concentric circles of
       15, 35, and 50 meters in diameter respectively from inside out.
@@ -133,6 +137,7 @@
   <!-- http://williamrobertfunk.com/ontologies/aircraft#numberOfLandingPointSize4 -->
 
   <DatatypeProperty rdf:about="&aircraft;numberOfLandingPointSize4">
+    <rdfs:label>Landing Points (Size 4)</rdfs:label>
     <rdfs:comment>
       Number of places in a Helicopter Landing Zone that contain three unobstructed concentric circles of
       15, 35, and 80 meters in diameter respectively from inside out.
@@ -146,6 +151,7 @@
   <!-- http://williamrobertfunk.com/ontologies/aircraft#numberOfLandingPointSize5 -->
 
   <DatatypeProperty rdf:about="&aircraft;numberOfLandingPointSize5">
+    <rdfs:label>Landing Points (Size 5)</rdfs:label>
     <rdfs:comment>
       Number of places in a Helicopter Landing Zone that contain three unobstructed concentric circles of
       15, 60, and 100 meters in diameter respectively from inside out.
@@ -159,6 +165,7 @@
   <!-- http://williamrobertfunk.com/ontologies/aircraft#numberOfLandingPointSize6 -->
 
   <DatatypeProperty rdf:about="&aircraft;numberOfLandingPointSize6">
+    <rdfs:label>Landing Points (Size 6)</rdfs:label>
     <rdfs:comment>
       Number of places in a Helicopter Landing Zone that contain three unobstructed concentric circles of
       15, 75, and 125 meters in diameter respectively from inside out.
@@ -172,6 +179,7 @@
   <!-- http://williamrobertfunk.com/ontologies/aircraft#numberOfLandingPointSize7 -->
 
   <DatatypeProperty rdf:about="&aircraft;numberOfLandingPointSize7">
+    <rdfs:label>Landing Points (Size 7)</rdfs:label>
     <rdfs:comment>
       Number of places in a Helicopter Landing Zone that contain three unobstructed concentric circles of
       15, 75, and 150 meters in diameter respectively from inside out.

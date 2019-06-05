@@ -13,6 +13,13 @@
   },
   "@graph": [
     {
+      "@id": "general:length",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:domain": {
+        "@id": "airport:Runway"
+      }
+    },
+    {
       "@id": "country:hasCountry",
       "@type": "owl:ObjectProperty",
       "rdfs:domain": {
@@ -23,24 +30,11 @@
       }
     },
     {
-      "@id": "airport:iataCode",
-      "@type": [
-        "owl:FunctionalProperty",
-        "owl:DatatypeProperty"
-      ],
-      "rdfs:comment": "\n      The International Air Transportation Association code associated with an airport or airline.\n    ",
-      "rdfs:domain": [
-        {
-          "@id": "airport:Airport"
-        },
-        {
-          "@id": "airport:Airline"
-        }
-      ],
-      "rdfs:label": "IATA Code",
-      "rdfs:range": {
-        "@id": "xsd:string"
-      }
+      "@id": "airport:Airline",
+      "@type": "owl:Class",
+      "blade:navClass": true,
+      "rdfs:comment": "\n      an organization providing a regular public service of air transportation on one or more routes.\n    ",
+      "rdfs:label": "Airline"
     },
     {
       "@id": "airport:relativeSize",
@@ -58,24 +52,46 @@
       }
     },
     {
-      "@id": "municipality:hasMunicipality",
-      "@type": "owl:ObjectProperty",
+      "@id": "general:wikiURI",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:domain": [
+        {
+          "@id": "airport:Airline"
+        },
+        {
+          "@id": "airport:Airport"
+        }
+      ]
+    },
+    {
+      "@id": "general:unit",
+      "@type": "owl:DatatypeProperty",
       "rdfs:domain": {
-        "@id": "airport:Airport"
-      },
-      "rdfs:range": {
-        "@id": "municipality:Municipality"
+        "@id": "airport:Runway"
       }
     },
     {
-      "@id": "general:hasLocation",
+      "@id": "general:hasSurfaceMaterial",
       "@type": "owl:ObjectProperty",
       "rdfs:domain": {
-        "@id": "airport:Airport"
+        "@id": "airport:Runway"
       },
       "rdfs:range": {
-        "@id": "general:Location"
+        "@id": "general:SurfaceMaterial"
       }
+    },
+    {
+      "@id": "http://williamrobertfunk.com/ontologies/airport",
+      "@type": "owl:Ontology",
+      "dc:contributor": "William R.A.D. Funk",
+      "dc:creator": "William R.A.D. Funk",
+      "dc:rights": "Copyright 2019 William R.A.D. Funk. All rights reserved.",
+      "owl:versionInfo": {
+        "@type": "xsd:decimal",
+        "@value": "1.3"
+      },
+      "rdfs:comment": "\n      Identifies application specific classes and annotations that are relevant\n      only to my associated applications.\n    ",
+      "rdfs:label": "Funk Ontology"
     },
     {
       "@id": "airport:status",
@@ -95,8 +111,8 @@
     {
       "@id": "airport:icaoCode",
       "@type": [
-        "owl:FunctionalProperty",
-        "owl:DatatypeProperty"
+        "owl:DatatypeProperty",
+        "owl:FunctionalProperty"
       ],
       "rdfs:comment": "\n      The International Civil Aviation Organization code associated with an airport.\n    ",
       "rdfs:domain": {
@@ -108,23 +124,10 @@
       }
     },
     {
-      "@id": "http://williamrobertfunk.com/ontologies/airport",
-      "@type": "owl:Ontology",
-      "dc:contributor": "William R.A.D. Funk",
-      "dc:creator": "William R.A.D. Funk",
-      "dc:rights": "Copyright 2019 William R.A.D. Funk. All rights reserved.",
-      "owl:versionInfo": {
-        "@type": "xsd:decimal",
-        "@value": "1.3"
-      },
-      "rdfs:comment": "\n      Identifies application specific classes and annotations that are relevant\n      only to my associated applications.\n    ",
-      "rdfs:label": "Funk Ontology"
-    },
-    {
       "@id": "airport:type",
       "@type": [
-        "owl:DatatypeProperty",
-        "owl:FunctionalProperty"
+        "owl:FunctionalProperty",
+        "owl:DatatypeProperty"
       ],
       "rdfs:comment": "\n      The general use type of the airport (Military, Airport, Heliport, Spaceport, etc.).\n    ",
       "rdfs:domain": {
@@ -141,21 +144,10 @@
       "rdfs:domain": {
         "@id": "airport:Airport"
       },
+      "rdfs:label": "Runway",
       "rdfs:range": {
         "@id": "airport:Runway"
       }
-    },
-    {
-      "@id": "general:wikiURI",
-      "@type": "owl:DatatypeProperty",
-      "rdfs:domain": [
-        {
-          "@id": "airport:Airline"
-        },
-        {
-          "@id": "airport:Airport"
-        }
-      ]
     },
     {
       "@id": "general:hasElevation",
@@ -168,11 +160,14 @@
       }
     },
     {
-      "@id": "airport:Airline",
-      "@type": "owl:Class",
-      "blade:navClass": true,
-      "rdfs:comment": "\n      an organization providing a regular public service of air transportation on one or more routes.\n    ",
-      "rdfs:label": "Airline"
+      "@id": "municipality:hasMunicipality",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "airport:Airport"
+      },
+      "rdfs:range": {
+        "@id": "municipality:Municipality"
+      }
     },
     {
       "@id": "airport:Airport",
@@ -184,15 +179,26 @@
     {
       "@id": "airport:hasAirport",
       "@type": "owl:ObjectProperty",
+      "rdfs:label": "Airport",
       "rdfs:range": {
         "@id": "airport:Airport"
       }
     },
     {
-      "@id": "general:unit",
+      "@id": "general:width",
       "@type": "owl:DatatypeProperty",
       "rdfs:domain": {
         "@id": "airport:Runway"
+      }
+    },
+    {
+      "@id": "general:hasLocation",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "airport:Airport"
+      },
+      "rdfs:range": {
+        "@id": "general:Location"
       }
     },
     {
@@ -201,6 +207,26 @@
       "blade:navClass": true,
       "rdfs:comment": "\n      defined rectangular area on a land aerodrome prepared for the landing and takeoff of aircraft.\n    ",
       "rdfs:label": "Runway"
+    },
+    {
+      "@id": "airport:iataCode",
+      "@type": [
+        "owl:FunctionalProperty",
+        "owl:DatatypeProperty"
+      ],
+      "rdfs:comment": "\n      The International Air Transportation Association code associated with an airport or airline.\n    ",
+      "rdfs:domain": [
+        {
+          "@id": "airport:Airline"
+        },
+        {
+          "@id": "airport:Airport"
+        }
+      ],
+      "rdfs:label": "IATA Code",
+      "rdfs:range": {
+        "@id": "xsd:string"
+      }
     }
   ]
 }

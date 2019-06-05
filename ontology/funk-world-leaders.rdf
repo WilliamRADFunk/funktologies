@@ -73,6 +73,7 @@
   <!-- http://williamrobertfunk.com/ontologies/world-leaders#appointedGovernmentOffice -->
 
   <ObjectProperty rdf:about="&wleaders;appointedGovernmentOffice">
+    <rdfs:label>Appointed Government Office</rdfs:label>
     <rdfs:comment>
       a government office to which this person is appointed.
     </rdfs:comment>
@@ -83,6 +84,7 @@
   <!-- http://williamrobertfunk.com/ontologies/world-leaders#hasGovernmentOffice -->
 
   <ObjectProperty rdf:about="&wleaders;hasGovernmentOffice">
+    <rdfs:label>Government Office</rdfs:label>
     <rdfs:domain rdf:resource="&country;Country"/>
     <rdfs:range rdf:resource="&wleaders;GovernmentOffice"/>
   </ObjectProperty>
@@ -90,6 +92,7 @@
   <!-- http://williamrobertfunk.com/ontologies/world-leaders#hasGovernmentOfficial -->
 
   <ObjectProperty rdf:about="&wleaders;hasGovernmentOfficial">
+    <rdfs:label>Government Official</rdfs:label>
     <rdfs:comment>
       a person serving a governing body in the capacity outlined by the government office to which they are employed.
     </rdfs:comment>
