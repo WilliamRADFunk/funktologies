@@ -24,7 +24,7 @@
   xmlns:blade="http://modusoperandi.com/ont/blade#">
 
   <Ontology rdf:about="http://williamrobertfunk.com/ontologies/general">
-    <versionInfo rdf:datatype="&xsd;decimal">1.1</versionInfo>
+    <versionInfo rdf:datatype="&xsd;decimal">1.2</versionInfo>
     <dc:rights>Copyright 2019 William R.A.D. Funk. All rights reserved.</dc:rights>
     <dc:creator>William R.A.D. Funk</dc:creator>
     <dc:contributor>William R.A.D. Funk</dc:contributor>
@@ -61,6 +61,7 @@
     <rdfs:comment>
       A location defined by latitude and longitude according to the wgs84 definition.
     </rdfs:comment>
+    <equivalentClass rdf:resource="&pos;SpatialThing" />
     <blade:navClass rdf:datatype="&xsd;boolean">true</blade:navClass>
   </Class>
 
@@ -197,28 +198,10 @@
     <rdfs:range rdf:resource="&xsd;string"/>
   </DatatypeProperty>
 
-  <!-- http://www.w3.org/2003/01/geo/wgs84_pos#lat -->
-
-  <DataProperty rdf:about="&pos;lat">
-    <rdfs:domain rdf:resource="&general;Location" />
-  </DataProperty>
-
-  <!-- http://www.w3.org/2003/01/geo/wgs84_pos#long -->
-
-  <DataProperty rdf:about="&pos;long">
-    <rdfs:domain rdf:resource="&general;Location" />
-  </DataProperty>
-
-  <!-- http://www.w3.org/2003/01/geo/wgs84_pos#alt -->
-
-  <DataProperty rdf:about="&pos;alt">
-    <rdfs:domain rdf:resource="&general;Location" />
-  </DataProperty>
-
   <!-- http://www.w3.org/2003/01/geo/wgs84_pos#lat_long -->
 
   <DataProperty rdf:about="&pos;lat_long">
-    <rdfs:domain rdf:resource="&general;Location" />
+    <rdfs:domain rdf:resource="&pos;SpatialThing" />
   </DataProperty>
 
   <!-- http://williamrobertfunk.com/ontologies/general#locationDescription -->

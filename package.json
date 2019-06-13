@@ -1,6 +1,6 @@
 {
   "name": "funktologies",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Contains the ontology files, repeatedly used models and utility functions for a number of data scraping modules.",
   "main": "lib/api.js",
   "scripts": {
@@ -46,6 +46,7 @@
     "typescript": "^3.4.5"
   },
   "devDependencies": {
+    "http-proxy-agent": "^2.1.0",
     "https-proxy-agent": "^2.2.1",
     "prettier": "^1.17.0",
     "tslint": "^5.15.0",
